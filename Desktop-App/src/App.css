@@ -1,38 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 .App {
-  text-align: center;
+  background-color: #f5f7fb;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.LeftSidebar {
+  background-color: #fafcfe;
+  padding: 3em 0;
+  height: 100vh;
+  z-index: 1;
+  transition: all 0.5s;
+  border-radius: 0 30px 30px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Logo {
+  margin: auto 0;
+  margin-bottom: 4rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  background-color: #115aa2;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: medium;
+  font-weight: 500;
 }
-
-.App-link {
-  color: #61dafb;
+.Sidebar_item {
+  background-color: #fafcfe;
+  width: 100%;
+  padding: 0.7em;
+  margin: 10px auto;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  color: #738395;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sidebar_item:hover {
+  background-color: #f9f2f7;
+  color: #5a62b2;
+  font-weight: 800;
+}
+.Sidebar_item_name {
+  margin-left: 1rem;
+  font-size: medium;
+  font-weight: 600;
+}
+.RightSidebar {
+  background-color: #fafcfe;
+  padding: 3em 0;
+  height: 100vh;
+  z-index: 1;
+  transition: all 0.5s;
+  border-radius: 0 30px 30px 0;
+}
+.Navbar {
+  background-color: aqua;
+  height: 7vh;
+  padding: 1em 0;
+  margin: 1em auto;
+}
+.Calendar {
+  background-color: #e80a0a;
+  height: 33vh;
+  margin: 1em auto;
+  padding: auto 1em;
+  color: #fafcfe;
+  font-weight: 500;
 }
