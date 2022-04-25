@@ -1,9 +1,9 @@
 import './App.css';
 import LeftSidebar from './components/Sidebar/LeftSidebar';
 import RightSidebar from './components/Sidebar/RightSidebar';
-
-import { Row, Col } from 'react-bootstrap';
 import MainPanel from './components/Layout/MainPanel';
+import { Row, Col } from 'react-bootstrap';
+
 
 function App() {
   return (
