@@ -1,12 +1,13 @@
 import '../src/Assets/Styles/main.scss';
 import LeftSidebar from '../src/Assets/components/Sidebar/LeftSidebar';
 import RightSidebar from '../src/Assets/components/Sidebar/RightSidebar';
-import MainPanel from '../src/Assets/components/Layout/StudentDashboard';
+import MainPanel from '../src/Assets/components/Layout/MainPannel';
 import { Row, Col } from 'react-bootstrap';
-
+import {BrowserRouter as Router,Routes,Route,Link,useParams,useRouteMatch} from "react-router-dom";
 
 function App() {
   return (
+    <Router>
     <div className="App">  
         <Row className="Page">
           <Col xl={2}><LeftSidebar/></Col>
@@ -14,6 +15,7 @@ function App() {
           <Col xl={3}><RightSidebar/></Col>
         </Row>
     </div>
+    </Router>
   );
 }
 

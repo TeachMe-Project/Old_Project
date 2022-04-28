@@ -4,6 +4,7 @@ import CardHeader from "../Card/CardHeader";
 import CardButton from "../Card/CardButton";
 import CardDetails from "../Card/CardDetails";
 import { Row, Col, Container } from "react-bootstrap";
+import "../../Styles/main.scss";
 
 function StudentDashboard() {
   return (
@@ -13,9 +14,104 @@ function StudentDashboard() {
           <h2>Dashboard</h2>
         </div>
         <div className="PanelContainer">
-          <Card>Search bar</Card>
+          
+          <Card>Search bar
+            <br/>
+            jkwnfkjenfejkfnejfnef\efjkenjkn
+           
+          </Card>
+          <h5>My Recent Courses</h5>
+          <div className="MyCoursesCardBackground">
+         
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         
+    
+          </div>
+          
 
-          <div className="MyCoursesCardBackground">jndjkfnejkfnekjfn</div>
+          <h5>My Pending Homework</h5>
+          <div className="PendingHomework">
+          <Row>
+         <Card>
+           {/* <div className=""></div> */}
+          
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+          
+         </Card>
+         </Row>
+         {/* <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card>
+         <Card>
+           <CardHeader>Mathematics class</CardHeader>
+           <CardDetails>
+            Grade 8
+           </CardDetails>
+           <CardDetails>
+            Mr. Lasitha Nuwan
+           </CardDetails>
+         </Card> */}
+         
+    
+          </div>
+
+
         </div>
 
         {/* <Tabs>
@@ -33,4 +129,6 @@ function StudentDashboard() {
     </div>
   );
 }
+
+
 export default StudentDashboard;

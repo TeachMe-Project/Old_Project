@@ -27,8 +27,10 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul, li {
   list-style: none;
+  padding:0;
+  margin:0;
 }
 
 // colours

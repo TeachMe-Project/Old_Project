@@ -10,7 +10,7 @@ export const UpcomingCard = () => {
       <Card>
         <CardHeader>History Class</CardHeader>
         <CardDetails>Mr. Kamal Maggona</CardDetails>
-        <div class="CardDetailsRow">
+        <div className="CardDetailsRow">
           <CardDetails>26th April, 2022</CardDetails>
           <CardDetails>|</CardDetails>
           <CardDetails>04:00pm - 06:00pm</CardDetails>
