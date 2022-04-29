@@ -10,6 +10,9 @@ import Dashboard from "./Dashboard";
 import MyCourses from "./MyCourses";
 import MyTeachers from "./MyTeachers";
 import Settings from "./Settings";
+import StudentProfile from "./StudentProfile";
+import { Course } from "./Course";
+
 
 const routes = [
   {
@@ -29,10 +32,19 @@ const routes = [
     path: "/settings",
     main: () => <Settings />,
   },
+  {
+    path: "/userprofile",
+    main: () => <StudentProfile />,
+  },
+  {
+    path: "/course",
+    main: () => <Course />,
+  },
 ];
 
 export default function MainPanel() {
   return (
+    <div className="MainPanel">
     <Routes>
       {routes.map((route, index) => (
         <Route
@@ -43,6 +55,7 @@ export default function MainPanel() {
         />
       ))}
     </Routes>
+    </div>
   );
 }
 

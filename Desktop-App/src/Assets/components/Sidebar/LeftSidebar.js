@@ -16,56 +16,56 @@ export const LeftSidebar = () => {
         <ul className="LeftNavbar">
           <Row>
             <li>
-              <div className="Sidebar_item">
-                <Link to="/">
+              <Link to="/" className="link">
+                <div className="Sidebar_item">
                   <div>
                     <BsFillGridFill />
                     {/* Link to edit the vertical align of react icons
             https://github.com/react-icons/react-icons */}
                   </div>
                   <div className="Sidebar_item_name">Dashboard</div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </li>
           </Row>
 
           <Row>
             <li>
-              <div className="Sidebar_item">
-                <Link to="/mycourses">
+              <Link to="/mycourses" className="link">
+                <div className="Sidebar_item">
                   <div>
                     <BsFillBookFill />
                   </div>
                   <div className="Sidebar_item_name">My Courses</div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </li>
           </Row>
 
           <Row>
             <li>
-              <div className="Sidebar_item">
-                <Link to="/myteachers">
-                <div>
-                  <GiTeacher />
+              <Link to="/myteachers" className="link">
+                <div className="Sidebar_item">
+                  <div>
+                    <GiTeacher />
+                  </div>
+                  <div className="Sidebar_item_name">My Teachers</div>
                 </div>
-                <div className="Sidebar_item_name">My Teachers</div>
-                </Link>
-              </div>
+              </Link>
             </li>
           </Row>
 
           <Row>
             <li>
-              <div className="Sidebar_item">
-                <Link to="/settings">
-                <div>
-                  {/* <IoMdCog.Provider value={{ style: { verticalAlign: 'middle' } }} /> */}
-                  <IoMdCog />
+              <Link to="/settings" className="link">
+                <div className="Sidebar_item">
+                  <div>
+                    {/* <IoMdCog.Provider value={{ style: { verticalAlign: 'middle' } }} /> */}
+                    <IoMdCog />
+                  </div>
+                  <div className="Sidebar_item_name">Settings</div>
                 </div>
-                <div className="Sidebar_item_name">Settings</div>
-                </Link>
-              </div>
+              </Link>
             </li>
           </Row>
         </ul>
