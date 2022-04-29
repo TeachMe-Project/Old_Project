@@ -1,7 +1,10 @@
-
-  .Button {
+.UpcomingCardBtn {
+    display: flex;
+    margin: 8px auto 0 auto;
+    justify-content: right;
+  }
+  .CardButton {
     width: max-content;
-    cursor: pointer;
     font-weight: 800;
     font-size: 12px;
     border-radius: 12px;
