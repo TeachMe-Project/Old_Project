@@ -13,7 +13,7 @@ export const PendingHomework = () => {
         <Row>
           <Col xl={1}>
             <div className="CardImg">
-              <img src={require("../../../Images/testimg1.jpg")} />
+            <img src={require("../../../Assets/Images/testimg1.jpg")} />
               </div>
           </Col>
           <Col xl={10}>

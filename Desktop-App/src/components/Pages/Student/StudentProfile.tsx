@@ -15,7 +15,7 @@ export const StudentProfile = () => {
         <div className="PanelContainer">
           <Row>
             <div className="ProfileImg">
-              <img src={require("../../../Images/testimg2.jpeg")} />
+            <img src={require("../../../Assets/Images/testimg2.jpeg")} />
             </div>
           </Row>
           <div className="ProfileDetailsContainer">

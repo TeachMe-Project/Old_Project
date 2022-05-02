@@ -21,7 +21,7 @@ export const Course = () => {
         <div className="PanelContainer">
           <div className="PanelSubHeader">
             <div className="PanelImg">
-              <img src={require("../../../Images/testimg2.jpeg")} />
+              <img src={require("../../../Assets/Images/testimg2.jpeg")} />
             </div>
             <h3>Mathematics Class</h3>
           </div>

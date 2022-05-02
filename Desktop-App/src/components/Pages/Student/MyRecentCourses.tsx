@@ -8,7 +8,7 @@ export const MyRecentCourses = () => {
     <div className="MyRecentCourses">
       <Card>
         <div className="CardImg">
-          <img src={require("../../../Images/testimg1.jpg")} />
+        <img src={require("../../../Assets/Images/testimg1.jpg")} />
         </div>
         <div className="CardContent">
           <CardHeader>Mathematics class</CardHeader>
