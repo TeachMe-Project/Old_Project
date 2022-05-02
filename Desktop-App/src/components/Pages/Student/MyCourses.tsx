@@ -17,7 +17,7 @@ export const MyCourses = () => {
           <Link to="/course" className="link">
             <Card>
               <div className="CardImg">
-                <img src={require("../../../Images/testimg2.jpeg")} />
+                <img src={require("../../../Assets/Images/testimg2.jpeg")} />
               </div>
               <div className="CardContent">
                 <CardHeader>Mathematics class</CardHeader>
@@ -28,7 +28,7 @@ export const MyCourses = () => {
             </Link>
             <Card>
               <div className="CardImg">
-                <img src={require("../../../Images/testimg2.jpeg")} />
+              <img src={require("../../../Assets/Images/testimg2.jpeg")} />
               </div>
               <div className="CardContent">
                 <CardHeader>Mathematics class</CardHeader>
@@ -38,7 +38,7 @@ export const MyCourses = () => {
             </Card>
             <Card>
               <div className="CardImg">
-                <img src={require("../../../Images/testimg2.jpeg")} />
+              <img src={require("../../../Assets/Images/testimg2.jpeg")} />
               </div>
               <div className="CardContent">
                 <CardHeader>Mathematics class</CardHeader>
@@ -48,7 +48,7 @@ export const MyCourses = () => {
             </Card>
             <Card>
               <div className="CardImg">
-                <img src={require("../../../Images/testimg2.jpeg")} />
+              <img src={require("../../../Assets/Images/testimg2.jpeg")} />
               </div>
               <div className="CardContent">
                 <CardHeader>Mathematics class</CardHeader>
@@ -58,7 +58,7 @@ export const MyCourses = () => {
             </Card>
             <Card>
               <div className="CardImg">
-                <img src={require("../../../Images/testimg2.jpeg")} />
+              <img src={require("../../../Assets/Images/testimg2.jpeg")} />
               </div>
               <div className="CardContent">
                 <CardHeader>Mathematics class</CardHeader>

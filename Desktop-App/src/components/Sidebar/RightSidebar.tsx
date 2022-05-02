@@ -11,9 +11,8 @@ export const RightSidebar = () => {
     <div className="RightSidebar">
       <Container>
         <Row>
-          <UserProfileNavbar>
+          <UserProfileNavbar name=" Maneth Wijetunga">
             <Link to="/userprofile" className="link">
-              Maneth Wijetunga
             </Link>
           </UserProfileNavbar>
         </Row>

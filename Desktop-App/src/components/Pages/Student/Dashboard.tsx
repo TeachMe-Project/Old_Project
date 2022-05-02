@@ -1,6 +1,6 @@
 import Card from "../../Card/Card";
 import { Row, Col, Container } from "react-bootstrap";
-import "../../../Styles/main.scss";
+import "../../../Assets/Styles/main.scss";
 import PendingHomework from "./PendingHomework";
 import MyRecentCourses from "./MyRecentCourses";
 

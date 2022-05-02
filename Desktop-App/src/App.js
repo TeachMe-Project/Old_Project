@@ -1,7 +1,7 @@
 import '../src/Assets/Styles/main.scss';
-import LeftSidebar from '../src/Assets/components/Sidebar/LeftSidebar';
-import RightSidebar from '../src/Assets/components/Sidebar/RightSidebar';
-import MainPanel from '../src/Assets/components/Pages/Student/MainPanel';
+import LeftSidebar from './components/Sidebar/LeftSidebar';
+import RightSidebar from './components/Sidebar/RightSidebar';
+import MainPanel from './components/Pages/Student/MainPanel';
 import { Row, Col } from 'react-bootstrap';
 import {BrowserRouter as Router} from "react-router-dom";
 

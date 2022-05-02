@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "../Card/Card";
-import CardHeader from "../Card/CardHeader";
-import CardButton from "../Card/CardButton";
-import CardDetails from "../Card/CardDetails";
+import Card from "./Card";
+import CardHeader from "./CardHeader";
+import CardButton from "./CardButton";
+import CardDetails from "./CardDetails";
 
 export const UpcomingCard = () => {
   return (

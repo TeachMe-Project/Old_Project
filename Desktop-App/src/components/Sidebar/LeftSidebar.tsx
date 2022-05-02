@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BsFillGridFill, BsFillBookFill } from "react-icons/bs";
 import { GiTeacher } from "react-icons/gi";
 import { IoMdCog } from "react-icons/io";
-import "../../Styles/main.scss";
+import "../../Assets/Styles/main.scss";
 import { Link } from "react-router-dom";
-import "../../components/Pages/Student/MainPanel";
+import "../Pages/Student/MainPanel";
 
 export const LeftSidebar = () => {
   return (
