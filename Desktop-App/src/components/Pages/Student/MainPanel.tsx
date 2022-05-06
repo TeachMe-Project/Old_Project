@@ -13,7 +13,6 @@ import Settings from "./Settings";
 import StudentProfile from "./StudentProfile";
 import { Course } from "./Course";
 
-
 const routes = [
   {
     path: "/",

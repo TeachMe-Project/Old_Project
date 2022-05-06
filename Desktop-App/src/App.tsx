@@ -3,17 +3,21 @@ import '../src/Assets/Styles/main.scss';
 import LeftSidebar from './components/Sidebar/LeftSidebar';
 import RightSidebar from './components/Sidebar/RightSidebar';
 import MainPanel from './components/Pages/Student/MainPanel';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import {BrowserRouter as Router} from "react-router-dom";
+import TopNavbar from './components/Navbars/TopNavbar';
 
 function App() {
   return (
     <Router>
     <div className="App">  
-        <Row className="Page">
-          <Col xl={3}><LeftSidebar/></Col>
-          <Col xl={9}><MainPanel/></Col>
-        </Row>
+    <div>
+       <TopNavbar/>
+       </div>
+        <div className="Page">
+          <Col xl={2}><LeftSidebar/></Col>
+          <Col xl={10}><MainPanel/></Col>
+        </div>
     </div>
      </Router>
   );

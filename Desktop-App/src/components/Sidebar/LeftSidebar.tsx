@@ -12,7 +12,7 @@ export const LeftSidebar = () => {
   return (
     <div className="LeftSidebar">
       <Container>
-        <div className="Logo">Logo</div>
+        {/* <div className="Logo">Logo</div> */}
         <ul className="LeftNavbar">
           <Row>
             <li>
