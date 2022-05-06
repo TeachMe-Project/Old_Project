@@ -1,25 +1,37 @@
-import "./assets/Styles/main.scss";
-import LeftSidebar from "./assets/components/Sidebar/LeftSidebar";
-import RightSidebar from "./assets/components/Sidebar/RightSidebar";
-import MainPanel from "./assets/components/Pages/Student/MainPanel";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./Assets/Styles/main.scss";
+import LeftSidebar from "./Assets/components/Sidebar/LeftSidebar";
+import RightSidebar from "./Assets/components/Sidebar/RightSidebar";
+import MainPanel from "./Assets/components/Pages/Student/MainPanel";
+import Chat from "./components/Chat/Chat";
 import { Row, Col } from "react-bootstrap";
-import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Row className="Page">
-          <Col xl={2}>
+      <Row className="Page">
+
+
+      <Col xl={2}>
             <LeftSidebar />
           </Col>
+
           <Col xl={7}>
-            <MainPanel />
-          </Col>
-          <Col xl={3}>
+        <Routes>
+        <Route exact path="/" element={<MainPanel/>} />
+        <Route exact path="chat" element={<Chat />} />
+        <Route exact path="*" element={ <div className="h-screen flex justify-center items-center">ERROR </div>}/>
+        </Routes>
+        </Col>
+
+
+        <Col xl={3}>
             <RightSidebar />
           </Col>
-        </Row>
+
+          </Row>
+        
       </div>
     </Router>
   );

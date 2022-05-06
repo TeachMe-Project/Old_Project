@@ -1,13 +1,37 @@
-import React from "react";
-import { ChatEngine } from "react-chat-engine";
-import dotenv from "dotenv";
+import React, { useState } from "react";
+import { ChatEngine, getOrCreateChat } from "react-chat-engine";
 
 const Chat = () => {
+  const [username, setUsername] = useState("");
+
+  function createDirectChat(creds) {
+    getOrCreateChat(
+      creds,
+      { is_direct_chat: true, usernames: [username] },
+      () => setUsername("")
+    );
+  }
+
+  function renderChatForm(creds) {
+    return (
+      <div>
+        <input
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <button onClick={() => createDirectChat(creds)}>Create</button>
+      </div>
+    );
+  }
+
   return (
     <ChatEngine
-      projectID={process.env.projectID}
-      userName={process.env.userName}
-      userSecret={process.env.userSecret}
+      height="100vh"
+      userName="hbsbashitha@gmail.com"
+      userSecret="Ucsccs4014."
+      projectID="45ab16bd-fbe5-4a09-b3b6-0adb5060ea79"
+      renderNewChatForm={(creds) => renderChatForm(creds)}
     />
   );
 };
