@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react';
 import Card from "../../Card/Card";
 import CardHeader from "../../Card/CardHeader";
 import CardDetails from "../../Card/CardDetails";

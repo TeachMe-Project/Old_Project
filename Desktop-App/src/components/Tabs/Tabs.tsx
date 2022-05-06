@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Component } from 'react'; 
+
+// import React,  from 'react';
+import {string, func, instanceOf} from 'prop-types';
 import Tab from './Tab';
 
 
-class Tabs extends Component {
-  static propTypes = {
-    children: PropTypes.instanceOf(Array).isRequired,
-  }
+class Tabs extends Component<{children:Array<any>} ,any> {
+ 
 
-  constructor(props) {
+  constructor(props:any) {
     super(props);
 
     this.state = {
@@ -16,7 +17,8 @@ class Tabs extends Component {
     };
   }
 
-  onClickTabItem = (tab) => {
+
+  onClickTabItem = (tab:any) => {
     this.setState({ activeTab: tab });
   }
 
@@ -34,7 +36,7 @@ class Tabs extends Component {
     return (
       <div className="Tabs">
         <ol className="tab-list">
-          {children.map((child) => {
+          {children.map((child:any) => {
             const { label } = child.props;
 
             return (

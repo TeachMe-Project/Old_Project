@@ -1,3 +1,4 @@
+import * as React from 'react';
 import '../src/Assets/Styles/main.scss';
 import LeftSidebar from './components/Sidebar/LeftSidebar';
 import RightSidebar from './components/Sidebar/RightSidebar';
@@ -10,12 +11,11 @@ function App() {
     <Router>
     <div className="App">  
         <Row className="Page">
-          <Col xl={2}><LeftSidebar/></Col>
-          <Col xl={7}><MainPanel/></Col>
-          <Col xl={3}><RightSidebar/></Col>
+          <Col xl={3}><LeftSidebar/></Col>
+          <Col xl={9}><MainPanel/></Col>
         </Row>
     </div>
-    </Router>
+     </Router>
   );
 }
 

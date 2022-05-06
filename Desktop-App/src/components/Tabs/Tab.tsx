@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Component } from 'react';
+import {string, func} from 'prop-types';
 
-class Tab extends Component {
+type TabProps ={
+  activeTab:string;
+  label:string;
+  onClick:any;
+}
+
+class Tab extends Component<TabProps> {
   static propTypes = {
-    activeTab: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    activeTab: string.isRequired,
+    label: string.isRequired,
+    onClick: func.isRequired,
   };
 
   onClick = () => {

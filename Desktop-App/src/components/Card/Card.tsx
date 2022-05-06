@@ -1,9 +1,17 @@
-import React from "react";
+import * as React from "react";
 
-export const Card = (props) => {
+type Card = {
+  btnname?: string;
+  details?:  string;
+  header?: string;
+
+}
+
+
+export const Card :React.FC<Card>= (props) => {
   return (
     <div className="Card">
-          {props.children}
+          {props.header}{props.details}{props.btnname}
     </div>
   );
 };

@@ -1,9 +1,13 @@
-import React from 'react'
+import * as React from "react";
 
-export const CardButton = (props) => {
+type CardButton = {
+  btnname?: string;
+}
+
+export const CardButton :React.FC<CardButton>= (props) => {
   return (
     <div className='CardButton'>
-         {props.children}
+         {props.btnname}
     </div>
   )
 }

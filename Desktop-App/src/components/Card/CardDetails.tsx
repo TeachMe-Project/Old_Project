@@ -1,9 +1,13 @@
-import React from 'react'
+import * as React from "react";
 
-export const CardDetails = (props) => {
+type CardDetails = {
+  details?:string
+}
+
+export const CardDetails :React.FC<CardDetails>= (props) => {
   return (
     <div className='CardDetails'>
-        {props.children}
+        {props.details}
     </div>
   )
 }

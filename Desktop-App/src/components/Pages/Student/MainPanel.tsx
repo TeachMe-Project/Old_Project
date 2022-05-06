@@ -1,10 +1,10 @@
+import * as React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
-  useParams,
-  useRouteMatch,
+  useParams
 } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import MyCourses from "./MyCourses";
@@ -50,7 +50,7 @@ export default function MainPanel() {
         <Route
           key={index}
           path={route.path}
-          exact={route.exact}
+          caseSensitive={route.exact}
           element={<route.main />}
         />
       ))}

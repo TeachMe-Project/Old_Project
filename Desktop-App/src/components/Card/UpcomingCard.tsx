@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Card from "./Card";
 import CardHeader from "./CardHeader";
 import CardButton from "./CardButton";
@@ -8,15 +8,15 @@ export const UpcomingCard = () => {
   return (
     <div className="UpcomingCard">
       <Card>
-        <CardHeader>History Class</CardHeader>
-        <CardDetails>Mr. Kamal Maggona</CardDetails>
+        <CardHeader header="History Class" />
+        <CardDetails details="Mr. Kamal Maggona" />
         <div className="CardDetailsRow">
-          <CardDetails>26th April, 2022</CardDetails>
-          <CardDetails>|</CardDetails>
-          <CardDetails>04:00pm - 06:00pm</CardDetails>
+          <CardDetails details="26th April, 2022" />
+          <CardDetails details="|" />
+          <CardDetails details="04:00pm - 06:00pm" />
         </div>
         <div className="UpcomingCardBtn">
-        <CardButton>Join Class</CardButton>
+          <CardButton btnname="Join Class" />
         </div>
       </Card>
     </div>

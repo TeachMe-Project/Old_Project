@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 import Card from "../../Card/Card";
 import CardHeader from "../../Card/CardHeader";
 import CardDetails from "../../Card/CardDetails";
@@ -27,22 +27,22 @@ export const Course = () => {
           </div>
 
           <Tabs>
-            <div label="Details">
+            <div className="Details">
               <Details></Details>
             </div>
-            <div label="Notes">
+            <div className="Notes">
               <Notes></Notes>
               <Notes></Notes>
               <Notes></Notes>
               <Notes></Notes>
             </div>
-            <div label="Homework">
+            <div className="Homework">
               <Homework></Homework>
               <Homework></Homework>
               <Homework></Homework>
               <Homework></Homework>
               </div>
-            <div label="Pending Payments">
+            <div className="Pending Payments">
               <PendingPayments></PendingPayments>
               <PendingPayments></PendingPayments>
               <PendingPayments></PendingPayments>

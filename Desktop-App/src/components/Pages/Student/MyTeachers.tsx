@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react';
 import Card from "../../Card/Card";
 import { Row, Col, Container } from "react-bootstrap";
 

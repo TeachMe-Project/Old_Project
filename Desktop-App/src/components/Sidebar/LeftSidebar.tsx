@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 import { Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BsFillGridFill, BsFillBookFill } from "react-icons/bs";
