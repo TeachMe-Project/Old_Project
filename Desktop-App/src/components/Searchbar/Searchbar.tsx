@@ -1,8 +1,12 @@
 import * as React from 'react';
+import { ImSearch } from "react-icons/im";
 
 const Searchbar = () => {
   return (
-    <div>Searchbar</div>
+    <div className='Searchbar'>
+      <input type="text" placeholder="Search" />
+      <ImSearch className="SearchIcon"/>
+    </div>
   )
 }
 
