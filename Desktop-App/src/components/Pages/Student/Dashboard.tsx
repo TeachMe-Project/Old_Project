@@ -7,8 +7,7 @@ import PendingHomework from "./PendingHomework";
 import TopNavbar from "../../Navbars/TopNavbar";
 import LeftSidebar from "../../Sidebar/LeftSidebar";
 import PanelContainer from "../../Layout/PanelContainer";
-
-
+import { AiOutlineHistory } from "react-icons/ai";
 
 export const Dashboard = () => {
   return (
@@ -24,7 +23,29 @@ export const Dashboard = () => {
               <h5>Upcoming Classes</h5>
             </div>
             <div className="PanelBody">
-              fefnekfnekjfnejkfnefknefjke
+              <Card
+                header="Mathematics"
+                teacher="Mr. Lasitha Nuwan"
+                time="04:00pm- 06:00pm"
+                date="23-05-2022"
+                btnname="Join"
+              />
+              <Card
+                header="Mathematics"
+                teacher="Mr. Lasitha Nuwan"
+                time="04:00pm- 06:00pm"
+                date="24-05-2022"
+                btnname="Join"
+                // image={require("../../Assets/Images/testimg2.jpeg")}
+              />
+
+              <Card
+                header="Mathematics"
+                teacher="Mr. Lasitha Nuwan"
+                time="04:00pm- 06:00pm"
+                date="25-05-2022"
+                btnname="Join"
+              />
             </div>
           </div>
 
@@ -33,10 +54,32 @@ export const Dashboard = () => {
               <h5>Pending Homework</h5>
             </div>
             <div className="PanelBody">
-              efknejkenfjkenfjefn
-              <PendingHomework />
+              {/* <PendingHomework /> */}
+
+              {/* <Card
+                header="Mathematics"
+                teacher="Mr. Lasitha Nuwan"
+                time= "04:00pm- 06:00pm"
+                date= "23-05-2022"
+                btnname="Join"
+              /> */}
+
+              <div className="PendingHomework">
+                <Card
+                  header="Mathematics class"
+                  teacher="Mr. Lasitha Nuwan"
+                  date="28-04-2022"
+                  btnname="view"
+                  // icon={AiOutlineHistory}
+                />
+               
+
+            
+              </div>
+              
             </div>
           </div>
+          
         </Row>
       </Container>
     </div>
