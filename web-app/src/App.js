@@ -1,6 +1,8 @@
 import './App.css';
-import './components/parent.css';
-import Parent from './components/parent.js';
+// import "./Assets/Styles/main.scss";
+import './Assets/components/parent.css';
+import Parent from './views/parent.js';
+// import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (

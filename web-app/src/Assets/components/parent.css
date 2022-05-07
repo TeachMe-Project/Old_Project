@@ -13,7 +13,6 @@
 .Parent-tab-content {
     display: flex;
     width: fit-content;
-    color: hsl(215, 18%, 57%);
     font-weight: 500;
     font-size: 1rem;
 }
@@ -21,6 +20,7 @@
 .Parent-tab-content-item {
     padding-inline: 1rem;
     padding-block: 0.6rem;
+    color: hsl(215, 18%, 57%);
     /* border-bottom: #8c7ae6 solid 1pt; */
 }
 
@@ -77,3 +77,25 @@
     max-height: 230px;
     overflow: auto;
 }
+
+.Parent-ongoing-class-content {
+    max-height: 530px;
+    overflow: auto;
+}
+
+.Parent-ongoing-class-content-item {
+    width: 95%;
+    margin-block: 2rem;
+    padding: 0.5rem;
+    border: #dcdde1 solid 1pt;
+    border-radius: 20px;
+}
+
+.Parent-ongoing-class-content-item .CardDetailsRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .Parent-ongoing-class-content h1 {
+    font-size: 1rem;
+} */
