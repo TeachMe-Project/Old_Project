@@ -29,6 +29,7 @@ export const Dashboard = () => {
                 time="04:00pm- 06:00pm"
                 date="23-05-2022"
                 btnname="Join"
+                image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
               />
               <Card
                 header="Mathematics"
@@ -36,7 +37,7 @@ export const Dashboard = () => {
                 time="04:00pm- 06:00pm"
                 date="24-05-2022"
                 btnname="Join"
-                // image={require("../../Assets/Images/testimg2.jpeg")}
+                image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
               />
 
               <Card
@@ -45,6 +46,7 @@ export const Dashboard = () => {
                 time="04:00pm- 06:00pm"
                 date="25-05-2022"
                 btnname="Join"
+                image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
               />
             </div>
           </div>
@@ -53,28 +55,45 @@ export const Dashboard = () => {
             <div className="PanelSubheader">
               <h5>Pending Homework</h5>
             </div>
-            <div className="PanelBody">
-              {/* <PendingHomework /> */}
-
-              {/* <Card
-                header="Mathematics"
-                teacher="Mr. Lasitha Nuwan"
-                time= "04:00pm- 06:00pm"
-                date= "23-05-2022"
-                btnname="Join"
-              /> */}
-
+            <div className="PanelBody"> 
               <div className="PendingHomework">
                 <Card
-                  header="Mathematics class"
+                  header="Mathematics"
                   teacher="Mr. Lasitha Nuwan"
                   date="28-04-2022"
-                  btnname="view"
-                  // icon={AiOutlineHistory}
+                  btnname="View"
+                  image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
                 />
-               
+                <Card
+                  header="Mathematics"
+                  teacher="Mr. Lasitha Nuwan"
+                  date="28-04-2022"
+                  btnname="View"
+                  image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
+                />
+                <Card
+                  header="Mathematics"
+                  teacher="Mr. Lasitha Nuwan"
+                  date="28-04-2022"
+                  btnname="View"
+                  image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
+                />
+                <Card
+                  header="Mathematics"
+                  teacher="Mr. Lasitha Nuwan"
+                  date="28-04-2022"
+                  btnname="View"
+                  image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
 
-            
+                />
+                <Card
+                  header="Mathematics"
+                  teacher="Mr. Lasitha Nuwan"
+                  date="28-04-2022"
+                  btnname="View"
+                  image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
+                />
+
               </div>
               
             </div>

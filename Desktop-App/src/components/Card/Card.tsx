@@ -6,27 +6,27 @@ import { CardButton } from "./CardButton";
 type Card = {
   btnname?: string;
   date?: string;
-  teacher?:string;
-  time?:string;
+  teacher?: string;
+  detail?: string;
+  time?: string;
   header?: string;
+  amount?: string;
   icon?: any;
-  // image?: HTMLImageElement;
+  image?: JSX.Element;
 };
 
 export const Card: React.FC<Card> = (props) => {
   return (
     <div className="Card">
-      <div className="CardImage">
-        {/* {props.image} */}
-        <img src={require("../../Assets/Images/testimg2.jpeg")} />
-      </div>
+      <div className="CardImage">{props.image}</div>
       <div className="CardBody">
         <CardHeader header={props.header} />
         <CardDetails details={props.teacher} />
         <CardDetails details={props.time} />
         <CardDetails details={props.date} />
+        <CardDetails details={props.detail} />
+        <CardDetails details={props.amount} />
         <CardButton btnname={props.btnname} />
-        {/* <CardButton icon={props.icon} /> */}
       </div>
     </div>
   );
