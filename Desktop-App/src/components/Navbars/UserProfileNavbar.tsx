@@ -1,9 +1,11 @@
 import * as React from "react";
 import { BsFillBellFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 
 type UserProfileNavbar={
   name: string;
+  image?: HTMLImageElement
 }
 
 export const UserProfileNavbar = (props:UserProfileNavbar) => {
@@ -12,7 +14,7 @@ export const UserProfileNavbar = (props:UserProfileNavbar) => {
       <div className="UserProfileButton">
         <Link to="/userprofile" className="link">
           <div className="UserImg">
-            {/* <img src={require("../../Assets/Images/testimg2.jpeg")} /> */}
+            <img src={require("../../Assets/Images/testimg2.jpeg")} />
           </div>
           <div className="Name">{props.name}</div>
         </Link>
@@ -20,6 +22,11 @@ export const UserProfileNavbar = (props:UserProfileNavbar) => {
       <Link to="#">
         <div className="NotificationBell">
           <BsFillBellFill className="Bell-icon" />
+        </div>
+      </Link>
+      <Link to="/userprofile" className="link">
+        <div className="SignoutBtn">
+          <Button name="Signout"/>
         </div>
       </Link>
     </div>

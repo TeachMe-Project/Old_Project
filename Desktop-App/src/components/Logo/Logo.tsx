@@ -1,9 +1,11 @@
 import * as React from "react";
 
+
 export const Logo = () => {
   return (
     <div className='Logo'>
-       My  Logo</div>
+       <img src="../../../"/>
+       </div>
   )
 }
 
