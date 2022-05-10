@@ -5,26 +5,20 @@ import CardDetails from "../../Card/CardDetails";
 import { Container, Row, Col } from "react-bootstrap";
 import { FiDownload } from "react-icons/fi";
 
-const Homework = () => {
+type Homework = {
+  name?:string;
+  date?:string;
+  btnname?:string;
+};
+
+const Homework: React.FC<Homework> = (props) => {
   return (
     <div className="Homework">
     <Container>
         <Row>
-          <Card>
-            <Row className="HomeworkBar">
-              <Col xl={7}>
-                <CardHeader>Homework Topic</CardHeader>
-              </Col>
-              <Col xl={2}>
-                <CardDetails>Deadline: </CardDetails>
-              </Col>
-              <Col xl={2}>
-                <CardDetails>2022-03-24</CardDetails>
-              </Col>
-              <Col xl={1}><FiDownload className="ReactIcon"/></Col>
-            </Row>
-          </Card>
-        
+        <Card header= {props.name}
+          detail={props.date} 
+          btnname="View" />
         </Row>
       </Container>
 

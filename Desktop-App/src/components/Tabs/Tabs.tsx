@@ -13,7 +13,7 @@ class Tabs extends Component<{children:Array<any>} ,any> {
     super(props);
 
     this.state = {
-      activeTab: this.props.children[0].props.label,
+      activeTab: this.props.children[0].props.className,
     };
   }
 
@@ -37,13 +37,13 @@ class Tabs extends Component<{children:Array<any>} ,any> {
       <div className="Tabs">
         <ol className="tab-list">
           {children.map((child:any) => {
-            const { label } = child.props;
+            const { className } = child.props;
 
             return (
               <Tab
                 activeTab={activeTab}
-                key={label}
-                label={label}
+                key={className}
+                label={className}
                 onClick={onClickTabItem}
               />
             );
@@ -51,7 +51,7 @@ class Tabs extends Component<{children:Array<any>} ,any> {
         </ol>
         <div className="tab-content">
           {children.map((child) => {
-            if (child.props.label !== activeTab) return undefined;
+            if (child.props.className !== activeTab) return undefined;
             return child.props.children;
           })}
         </div>
