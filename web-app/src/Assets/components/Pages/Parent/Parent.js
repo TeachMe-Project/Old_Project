@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import OngoingClassCard from '../Assets/components/Ongoing-Class-Container/OngoingClassContent.js';
-import ParentPayment from '../Assets/components/Payment-Container/ParentPayment.js';
-import TabContentItem from '../Assets/components/Tab-Content/TabContentItem.js';
+import {Link} from "react-router-dom";
+// import OngoingClassContent from '../../Ongoing-Class-Container/OngoingClassContent';
+// import ParentPayment from '../../Payment-Container/ParentPayment.js';
+import TabContentItem from '../../Tab-Content/TabContentItem.js';
+import './ParentMainPanel.js';
 
 class Parent extends Component {
     render() {
@@ -11,6 +13,7 @@ class Parent extends Component {
                     <h1>Parent</h1>
                 </div>
                 <div className="Parent-tab-content">
+
                     <TabContentItem>
                         Payment
                     </TabContentItem>
@@ -22,8 +25,7 @@ class Parent extends Component {
                     </TabContentItem>
                 </div>
                 {/* <ParentPayment></ParentPayment> */}
-                <OngoingClassCard></OngoingClassCard>
-            </div>
+                {/* <OngoingClassContent></OngoingClassContent> */} </div>
         );
     }
 }
