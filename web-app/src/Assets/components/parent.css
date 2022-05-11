@@ -1,0 +1,101 @@
+.Parent {
+    margin-left: 1rem;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.Parent-header h1{
+    color: #2f3640;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.Parent-tab-content {
+    display: flex;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.Parent-tab-content-item {
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    color: hsl(215, 18%, 57%);
+    /* border-bottom: #8c7ae6 solid 1pt; */
+}
+
+.Parent-tab-content-item {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.Parent-payment {
+    /* margin-block: 1rem; */
+}
+
+.Parent-payment h1 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.Parent-payment p {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #7f8fa6;
+}
+
+.Parent-upcomingPayments {
+    width: 95%;
+    margin-block: 2rem;
+    padding: 1rem;
+    border: #dcdde1 solid 1pt;
+    border-radius: 20px;
+}
+
+.Parent-upcomingPayments-content {
+    max-height: 140px;
+    overflow: auto;
+}
+
+.Parent-upcomingPayments-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.4rem;
+}
+
+.Parent-transactions {
+    width: 95%;
+    padding: 1rem;
+    border: #dcdde1 solid 1pt;
+    border-radius: 20px;
+}
+
+.Parent-transactions-content {
+    max-height: 230px;
+    overflow: auto;
+}
+
+.Parent-ongoing-class-content {
+    max-height: 530px;
+    overflow: auto;
+}
+
+.Parent-ongoing-class-content-item {
+    width: 95%;
+    margin-block: 2rem;
+    padding: 0.5rem;
+    border: #dcdde1 solid 1pt;
+    border-radius: 20px;
+}
+
+.Parent-ongoing-class-content-item .CardDetailsRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .Parent-ongoing-class-content h1 {
+    font-size: 1rem;
+} */
