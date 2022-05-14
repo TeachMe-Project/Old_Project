@@ -1,13 +1,13 @@
-import {Express} from "express";
-import express = require("express");
-import config from "./config/config";
-import logging from "./utils/logger";
-import bodyParser from "body-parser";
-import studentRoutes from './route/student'
+import { Express } from 'express';
+import express = require('express');
+import config from './config/config';
+import logging from './utils/logger';
+import bodyParser from 'body-parser';
+import studentRoutes from './route/student';
 
 const host = config.server.hostname;
 const port = config.server.port;
-const app: Express =  express();
+const app: Express = express();
 const NAMESPACE = 'Server';
 
 /** Log the request */
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     res.on('finish', () => {
         /** Log the res */
         logging.info(NAMESPACE, `METHOD: [${req.method}] - URL: [${req.url}] - STATUS: [${res.statusCode}] - IP: [${req.socket.remoteAddress}]`);
-    })
+    });
 
     next();
 });
@@ -40,7 +40,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 app.use('/users', studentRoutes);
 
 app.use((req, res) => {
@@ -51,5 +50,4 @@ app.use((req, res) => {
     });
 });
 
-
-app.listen(port , () => logging.info(NAMESPACE, `Server is running ${host}:${port}`));
+app.listen(port, () => logging.info(NAMESPACE, `Server is running http://${host}:${port}`));

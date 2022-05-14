@@ -1,8 +1,8 @@
-import { Request, Response} from "express";
-import {Connect, Query} from "../utils/dbConnect";
-import logging from "../utils/logger";
+import { Request, Response } from 'express';
+import { Connect, Query } from '../utils/dbConnect';
+import logging from '../utils/logger';
 
-const NAMESPACE = "Students"
+const NAMESPACE = 'Users';
 
 const createUser = async (req: Request, res: Response) => {
     logging.info(NAMESPACE, 'Inserting User');
@@ -44,16 +44,16 @@ const createUser = async (req: Request, res: Response) => {
         });
 };
 
-const getAll = async (req: Request, res: Response) => {
-    logging.info(NAMESPACE, 'Getting all books.');
+const getAllUser = async (req: Request, res: Response) => {
+    logging.info(NAMESPACE, 'Getting All Users.');
 
-    let query = 'SELECT * FROM books';
+    let query = 'SELECT * FROM User';
 
     Connect()
         .then((connection) => {
             Query(connection, query)
                 .then((results) => {
-                    logging.info(NAMESPACE, 'Retrieved books: ', results);
+                    logging.info(NAMESPACE, 'Retrieved Users: ', results);
 
                     return res.status(200).json({
                         results
@@ -82,4 +82,4 @@ const getAll = async (req: Request, res: Response) => {
         });
 };
 
-export default { createUser, getAll };
+export default { createUser, getAllUser };
