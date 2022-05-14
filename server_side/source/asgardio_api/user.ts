@@ -7,7 +7,7 @@ import logging from "../utils/logger";
 let token_url = config.asgardeo.token_url;
 let client_id = config.asgardeo.client_id;
 let client_secret = config.asgardeo.client_secret;
-let access_token;
+let access_token: string | undefined;
 
 const NAMESPACE = 'Users';
 
@@ -27,11 +27,11 @@ const getAccessToken = (callback: () => void) => {
     })
         .then((response: AxiosResponse) => {
             access_token = JSON.stringify(response.data.access_token);
-            access_token = access_token.replace('"', '');
+            access_token = access_token.replace(/"/g, '');
+            console.log(access_token);
             if (access_token) {
                 callback();
                 logging.info(NAMESPACE, 'Access Token Created: ', access_token);
-                return access_token
             }
         })
         .catch((error) => {
@@ -44,4 +44,70 @@ const getAccessToken = (callback: () => void) => {
         )
 }
 
-export default {getAccessToken};
+let user = {
+    email: "saman@gmail.com",
+    firstName: "saman",
+    lastName: "banda",
+    password: "Test@123"
+}
+
+const createAuthUser = () => {
+    getAccessToken(() => {
+        axios(
+            {
+                method: 'post',
+                url: 'https://api.asgardeo.io/t/prasadkpd/scim2/Users',
+                headers: {
+                    'Authorization': `Bearer ${access_token}`,
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify({
+                    "emails": [
+                        {
+                            "primary": true,
+                            "value": `${user.email}`
+                        }
+                    ],
+                    "name": {
+                        "familyName": `${user.lastName}`,
+                        "givenName": `${user.firstName}`
+                    },
+                    "password": `${user.password}`,
+                    "userName": "CUSTOMER-DEFAULT/" + `${user.email}`
+                })
+            })
+            .then(function (response) {
+
+                logging.info(NAMESPACE, 'User Auth Created: ', response.data);
+
+            })
+            .catch(function (error) {
+                logging.info(NAMESPACE, access_token, 'Hello')
+                logging.error(NAMESPACE, 'Not Done', error.message);
+            })
+    })
+}
+
+const getAuthUser =() => {
+    getAccessToken(()=>{
+        axios(
+            {
+                method: 'get',
+                url: 'https://api.asgardeo.io/t/prasadkpd/scim2/Users',
+                headers: {
+                    'Authorization': `Bearer ${access_token}`,
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+                // res.status(200).json(response.data);
+            })
+            .catch(function (error) {
+                // return
+                // console.log('error');
+                // res.status(500).json({message: error});
+            })
+    });
+}
+export default {createAuthUser, getAuthUser};

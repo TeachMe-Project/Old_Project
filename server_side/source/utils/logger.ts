@@ -1,4 +1,4 @@
-const info = (namespace: string, message: string, object?: any) => {
+const info = (namespace: string, message: string | PromiseLike<string | undefined> | undefined, object?: any) => {
     if (object) {
         console.info(`[${getTimeStamp()}] [INFO] [${namespace}] ${message}`, object);
     } else {
