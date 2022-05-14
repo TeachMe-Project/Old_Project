@@ -88,8 +88,8 @@ const createAuthUser = () => {
     })
 }
 
-const getAuthUser =() => {
-    getAccessToken(()=>{
+const getAuthUser = () => {
+    getAccessToken(() => {
         axios(
             {
                 method: 'get',

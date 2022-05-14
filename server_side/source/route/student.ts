@@ -4,6 +4,6 @@ import asgardeo from '../asgardio_api/user';
 const router = express.Router();
 
 router.get('/get', controller.getAllUser);
-router.get('/',asgardeo.getAuthUser);
+router.get('/',asgardeo.createAuthUser);
 
 export = router;
