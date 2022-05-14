@@ -3,7 +3,8 @@ import express = require('express');
 import config from './config/config';
 import logging from './utils/logger';
 import bodyParser from 'body-parser';
-import studentRoutes from './route/student';
+import route from './route/routes';
+import routes from "./route/routes";
 
 const host = config.server.hostname;
 const port = config.server.port;
@@ -40,7 +41,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/users', studentRoutes);
+routes(app);
 
 app.use((req, res) => {
     const error = new Error('Not found');
