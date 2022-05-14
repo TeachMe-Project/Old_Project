@@ -1,10 +1,11 @@
 import {Express} from "express";
 import express = require("express");
-import config from "../config/config";
-import logging from "../utils/logger";
+import config from "./config/config";
+import logging from "./utils/logger";
 import bodyParser from "body-parser";
-import studentRoutes from '../route/student'
+import studentRoutes from './route/student'
 
+const host = config.server.hostname;
 const port = config.server.port;
 const app: Express =  express();
 const NAMESPACE = 'Server';
@@ -42,7 +43,7 @@ app.use((req, res, next) => {
 
 app.use('/users', studentRoutes);
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     const error = new Error('Not found');
 
     res.status(404).json({
@@ -51,4 +52,4 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(config.server.port, () => logging.info(NAMESPACE, `Server is running ${config.server.hostname}:${config.server.port}`));
+app.listen(port , () => logging.info(NAMESPACE, `Server is running ${host}:${port}`));

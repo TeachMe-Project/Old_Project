@@ -1,11 +1,11 @@
-import {NextFunction, Request, Response} from "express";
+import { Request, Response} from "express";
 import {Connect, Query} from "../utils/dbConnect";
 import logging from "../utils/logger";
 
 const NAMESPACE = "Students"
 
-const createBook = async (req: Request, res: Response, next: NextFunction) => {
-    logging.info(NAMESPACE, 'Inserting books');
+const createUser = async (req: Request, res: Response) => {
+    logging.info(NAMESPACE, 'Inserting User');
 
     let { author, title } = req.body;
 
@@ -44,7 +44,7 @@ const createBook = async (req: Request, res: Response, next: NextFunction) => {
         });
 };
 
-const getAllBooks = async (req: Request, res: Response, next: NextFunction) => {
+const getAll = async (req: Request, res: Response) => {
     logging.info(NAMESPACE, 'Getting all books.');
 
     let query = 'SELECT * FROM books';
@@ -82,4 +82,4 @@ const getAllBooks = async (req: Request, res: Response, next: NextFunction) => {
         });
 };
 
-export default { createBook, getAllBooks };
+export default { createUser, getAll };
