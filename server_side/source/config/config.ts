@@ -22,9 +22,17 @@ const SERVER = {
     port: SERVER_PORT
 };
 
+const ASGARDEO = {
+    org_name : 'prasadkpd',
+    client_id : 'BTWf7qW3eMGHTFsuT_UnrwfjpfEa',
+    client_secret : '_hf0ra2eFUfewc5hxjnEoj707Oga',
+    token_url : `https://api.asgardeo.io/t/prasadkpd/oauth2/token`
+}
+
 const config = {
     mysql: MYSQL,
-    server: SERVER
+    server: SERVER,
+    asgardeo: ASGARDEO
 };
 
 export default config;

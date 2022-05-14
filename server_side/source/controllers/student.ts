@@ -24,7 +24,7 @@ const createUser = async (req: Request, res: Response) => {
                 .catch((error) => {
                     logging.error(NAMESPACE, error.message, error);
 
-                    return res.status(200).json({
+                    return res.status(500).json({
                         message: error.message,
                         error
                     });
@@ -37,7 +37,7 @@ const createUser = async (req: Request, res: Response) => {
         .catch((error) => {
             logging.error(NAMESPACE, error.message, error);
 
-            return res.status(200).json({
+            return res.status(500).json({
                 message: error.message,
                 error
             });
@@ -62,7 +62,7 @@ const getAllUser = async (req: Request, res: Response) => {
                 .catch((error) => {
                     logging.error(NAMESPACE, error.message, error);
 
-                    return res.status(200).json({
+                    return res.status(500).json({
                         message: error.message,
                         error
                     });
@@ -75,7 +75,7 @@ const getAllUser = async (req: Request, res: Response) => {
         .catch((error) => {
             logging.error(NAMESPACE, error.message, error);
 
-            return res.status(200).json({
+            return res.status(500).json({
                 message: error.message,
                 error
             });
