@@ -29,7 +29,7 @@ const Chat = () => {
     <ChatEngine
       height="100vh"
       userName="hbsbashitha@gmail.com"
-      userSecret="Ucsccs4014."
+      userSecret="Bhashitha1234."
       projectID="45ab16bd-fbe5-4a09-b3b6-0adb5060ea79"
       renderNewChatForm={(creds) => renderChatForm(creds)}
     />
