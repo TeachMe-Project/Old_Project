@@ -6,26 +6,26 @@ import {
 import OngoingClassContent from "../../Ongoing-Class-Container/OngoingClassContent";
 import ParentPayment from "../../Payment-Container/ParentPayment";
 
-// const routes = [
-//     {
-//         path: "/",
-//         exact: true,
-//         main: () => <ParentPayment />
-//     },
-//     {
-//         path: "/summary",
-//         main: () => <h2>Summary</h2>
-//     },
-//     {
-//         path: "/ongoingclasses",
-//         main: () => <OngoingClassContent />
-//     }
-// ];
+const routes = [
+    {
+        path: "/",
+        exact: true,
+        main: () => <ParentPayment />
+    },
+    {
+        path: "/summary",
+        main: () => <h2>Summary</h2>
+    },
+    {
+        path: "/ongoingclasses",
+        main: () => <OngoingClassContent />
+    }
+];
 
 export const MainPanel = () => {
     return (
         <div className="Parent-main-panel">
-            {/* <Routes> {
+            <Routes> {
                 routes.map((route, index) => (
                     <Route key={index}
                         path={
@@ -36,10 +36,10 @@ export const MainPanel = () => {
                         }
                         element={<route.main/>}/>
                 ))
-            } </Routes> */}
-            <Route exact path="/" component={ ParentPayment }/>
+            } </Routes>
+            {/* <Route exact path="/" component={ ParentPayment }/>
             <Route path="/summary" component={ <h2>Summary</h2> }/>
-            <Route path="/ongoingclasses" component={ OngoingClassContent }/>
+            <Route path="/ongoingclasses" component={ OngoingClassContent }/> */}
         </div>
     );
 };
