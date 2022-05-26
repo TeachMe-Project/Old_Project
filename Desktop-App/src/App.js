@@ -1,7 +1,8 @@
 import "./Assets/Styles/main.scss";
-import LeftSidebar from "./Assets/components/Sidebar/LeftSidebar";
-import RightSidebar from "./Assets/components/Sidebar/RightSidebar";
-import MainPanel from "./Assets/components/Pages/Student/MainPanel";
+import LeftSidebar from "./components/Sidebar/LeftSidebar";
+import RightSidebar from "./components/Sidebar/RightSidebar";
+
+import MainPanel from "./components/Pages/Student/MainPanel";
 import { Row, Col } from "react-bootstrap";
 
 function App() {
