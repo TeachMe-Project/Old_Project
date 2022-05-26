@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Assets/Styles/main.scss";
 import LeftSidebar from "./Assets/components/Sidebar/LeftSidebar";
 import RightSidebar from "./Assets/components/Sidebar/RightSidebar";
 import MainPanel from "./Assets/components/Pages/Student/MainPanel";
-import Chat from "./components/Chat/Chat";
 import { Row, Col } from "react-bootstrap";
 
 function App() {
