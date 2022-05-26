@@ -3,8 +3,7 @@ import app from "./app";
 import config from './config/config';
 import logging from './utils/logging';
 import bodyParser from 'body-parser';
-import route from './route/user.routes';
-import userRoutes from "./route/user.routes";
+
 
 const host = config.server.hostname;
 const port = config.server.port;
@@ -26,6 +25,7 @@ app.use((req, res, next) => {
 /** Parse the body of the request */
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use()
 
 /** Rules of our API */
 app.use((req, res, next) => {
