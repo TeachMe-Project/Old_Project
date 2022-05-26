@@ -1,10 +1,10 @@
 import * as http from "http";
 import app from "./app";
 import config from './config/config';
-import logging from './utils/logger';
+import logging from './utils/logging';
 import bodyParser from 'body-parser';
-import route from './route/routes';
-import routes from "./route/routes";
+import route from './route/user.routes';
+import userRoutes from "./route/user.routes";
 
 const host = config.server.hostname;
 const port = config.server.port;

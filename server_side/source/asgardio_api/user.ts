@@ -2,7 +2,7 @@ import axios, {AxiosResponse} from "axios";
 import qs from "qs";
 import config from "../config/config";
 import {response, Response} from "express";
-import logging from "../utils/logger";
+import logging from "../utils/logging";
 
 let token_url = config.asgardeo.token_url;
 let client_id = config.asgardeo.client_id;
