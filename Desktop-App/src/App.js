@@ -1,7 +1,7 @@
 import "./Assets/Styles/main.scss";
-import LeftSidebar from "./Assets/components/Sidebar/LeftSidebar";
-import RightSidebar from "./Assets/components/Sidebar/RightSidebar";
-import MainPanel from "./Assets/components/Pages/Student/MainPanel";
+import LeftSidebar from "./components/Sidebar/LeftSidebar";
+import MainPanel from "./components/Pages/Student/MainPanel";
+import TopNavbar from "./components/Navbars/TopNavbar";
 import { Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -9,16 +9,17 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Row>
+          <TopNavbar></TopNavbar>
+          </Row>
         <Row className="Page">
           <Col xl={2}>
             <LeftSidebar />
           </Col>
-          <Col xl={7}>
+          <Col xl={9}>
             <MainPanel />
           </Col>
-          <Col xl={3}>
-            <RightSidebar />
-          </Col>
+          
         </Row>
       </div>
     </Router>
