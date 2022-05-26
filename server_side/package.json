@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --transpile-only source/server.ts",
-    "build": "rm -rf build && prettier --write source/ && tsc"
+    "build": "rm -rf build && prettier --write source/ && tsc",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^3.14.0",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "config": "^3.3.7",
@@ -21,6 +23,7 @@
     "mysql": "^2.18.1",
     "pino": "^7.11.0",
     "pino-pretty": "^7.6.1",
+    "prisma": "^3.14.0",
     "zod": "^3.16.0"
   },
   "devDependencies": {

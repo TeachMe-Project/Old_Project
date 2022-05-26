@@ -1,5 +1,5 @@
-import { Express } from 'express';
-import express = require('express');
+import * as http from "http";
+import app from "./app";
 import config from './config/config';
 import logging from './utils/logger';
 import bodyParser from 'body-parser';
@@ -8,7 +8,6 @@ import routes from "./route/routes";
 
 const host = config.server.hostname;
 const port = config.server.port;
-const app: Express = express();
 const NAMESPACE = 'Server';
 
 /** Log the request */
@@ -41,8 +40,6 @@ app.use((req, res, next) => {
     next();
 });
 
-routes(app);
-
 app.use((req, res) => {
     const error = new Error('Not found');
 
@@ -51,4 +48,6 @@ app.use((req, res) => {
     });
 });
 
-app.listen(port, () => logging.info(NAMESPACE, `Server is running http://${host}:${port}`));
+const server = http.createServer(app);
+
+server.listen(port, () => logging.info(NAMESPACE, `Server is running http://${host}:${port}`));

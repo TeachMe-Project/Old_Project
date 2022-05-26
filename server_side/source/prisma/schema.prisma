@@ -1,0 +1,118 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Course {
+  course_name      String             @db.VarChar(100)
+  grade            String             @db.VarChar(3)
+  subject          String             @db.VarChar(100)
+  duration         Int
+  start_date       DateTime           @db.Date
+  course_id        Int                @id @default(autoincrement())
+  teacher_id       Int
+  price            Int
+  Teacher          Teacher            @relation(fields: [teacher_id], references: [teacher_id], onDelete: NoAction, map: "FK TO COURSE FROM TEACHER")
+  Institute_Course Institute_Course[] @ignore
+  Student_Course   Student_Course[]   @ignore
+
+  @@index([teacher_id], map: "FK TO COURSE FROM TEACHER")
+}
+
+model Institute {
+  institute_id     Int                @id @default(autoincrement())
+  institute_name   String             @db.VarChar(255)
+  contact_no       String             @db.VarChar(12)
+  user_id          Int
+  User             User               @relation(fields: [user_id], references: [user_id], onDelete: NoAction, map: "FK TO INSTITUTE FROM USER")
+  Institute_Course Institute_Course[] @ignore
+
+  @@index([user_id], map: "FK TO INSTITUTE FROM USER")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model Institute_Course {
+  institute_id Int
+  course_id    Int
+  Course       Course    @relation(fields: [course_id], references: [course_id], onDelete: NoAction, map: "FK TO INS_CO FROM COURSE")
+  Institute    Institute @relation(fields: [institute_id], references: [institute_id], onDelete: NoAction, map: "FK TO INS_CO FROM INSTITUTE")
+
+  @@index([course_id], map: "FK TO INS_CO FROM COURSE")
+  @@index([institute_id], map: "FK TO INS_CO FROM INSTITUTE")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model Parent {
+  parent_id Int
+  user_id   Int
+  User      User @relation(fields: [user_id], references: [user_id], onDelete: NoAction, map: "FK TO PARENT FROM USER")
+
+  @@index([user_id], map: "FK TO PARENT FROM USER")
+  @@ignore
+}
+
+model Student {
+  first_name     String           @db.VarChar(30)
+  last_name      String           @db.VarChar(30)
+  school         String           @db.VarChar(100)
+  grade          String           @db.VarChar(3)
+  student_id     Int              @id
+  user_id        Int
+  parent_id      Int
+  User           User             @relation(fields: [user_id], references: [user_id], onDelete: NoAction, map: "FK TO STUDENT FROM USER")
+  Student_Course Student_Course[] @ignore
+
+  @@index([user_id], map: "FK TO STUDENT FROM USER")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model Student_Course {
+  student_id     Int
+  course_id      Int
+  payment_status Student_Course_payment_status
+  student_status Student_Course_student_status
+  Course         Course                        @relation(fields: [course_id], references: [course_id], onDelete: NoAction, map: "FK TO STU_CO FROM COURSE")
+  Student        Student                       @relation(fields: [student_id], references: [student_id], onDelete: NoAction, map: "FK TO STU_CO FROM STUDENT")
+
+  @@index([course_id], map: "FK TO STU_CO FROM COURSE")
+  @@index([student_id], map: "FK TO STU_CO FROM STUDENT")
+  @@ignore
+}
+
+model Teacher {
+  teacher_id  Int      @id @default(autoincrement())
+  first_name  String   @db.VarChar(30)
+  last_name   String   @db.VarChar(30)
+  description String   @db.VarChar(255)
+  user_id     Int
+  User        User     @relation(fields: [user_id], references: [user_id], onDelete: NoAction, map: "FK TO TEACHER FROM USER")
+  Course      Course[]
+
+  @@index([user_id], map: "FK TO TEACHER FROM USER")
+}
+
+model User {
+  user_id   Int         @id @default(autoincrement())
+  username  String      @db.VarChar(30)
+  password  String      @db.VarChar(255)
+  Institute Institute[]
+  Parent    Parent[]    @ignore
+  Student   Student[]
+  Teacher   Teacher[]
+}
+
+enum Student_Course_payment_status {
+  paid
+  unpaid
+}
+
+enum Student_Course_student_status {
+  active
+  inactive
+}
