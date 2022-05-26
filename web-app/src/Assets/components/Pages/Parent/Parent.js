@@ -15,11 +15,11 @@ class Parent extends Component {
                 </div>
                 {/* <UserProfileNavbar></UserProfileNavbar> */}
                 <div className="Parent-tab-content">
-                    <Link to='/'>
+                    {/* <Link to='/'> */}
                     <TabContentItem>
                         Payment
                     </TabContentItem>
-                    </Link>
+                    {/* </Link> */}
                     <TabContentItem>
                         Summary
                     </TabContentItem>
