@@ -14,7 +14,7 @@ export const UserProfileNavbar = (props) => {
       <div className="UserProfileButton">
         <Link to="/userprofile" className="link">
           <div className="UserImg">
-            <img src={require("../../Images/pexels-photo-1226302.jpeg")} />
+            <img src={require("../../Assets/Images/pexels-photo-1226302.jpeg")} />
           </div>
           <div className="Name">{props.name}</div>
         </Link>

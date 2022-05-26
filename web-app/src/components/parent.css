@@ -8,6 +8,7 @@
     font-weight: 700;
     font-size: 2.4rem;
     margin-left: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .Parent-tab-content {
@@ -15,6 +16,7 @@
     width: fit-content;
     font-weight: 500;
     font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .Parent-tab-content-item {
@@ -38,6 +40,7 @@
 .Parent-payment h1 {
     font-weight: 500;
     font-size: 1.2rem;
+    margin-left: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -48,7 +51,9 @@
 }
 
 .Parent-upcomingPayments {
-    width: 95%;
+    display: block;
+    margin: auto;
+    width: 80%;
     margin-block: 2rem;
     padding: 1rem;
     border: #dcdde1 solid 1pt;
@@ -100,26 +105,42 @@
 }
 
 .Parent-transactions {
-    width: 95%;
+    display: block;
+    margin: auto;
+    width: 80%;
     padding: 1rem;
+    margin-block: 2rem;
     border: #dcdde1 solid 1pt;
     border-radius: 20px;
     box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 }
 
 .Parent-transactions-content {
-    max-height: 210px;
+    max-height: 200px;
     overflow: auto;
 }
 
 .Parent-ongoing-class-content {
-    max-height: 530px;
+    
+}
+
+.Parent-ongoing-class-content h1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
+.Parent-ongoing-class-content .Parent-upcoming-class {
+    max-height: 130px; 
     overflow: auto;
 }
 
 .Parent-ongoing-class-content-item {
-    width: 95%;
-    margin-block: 2rem;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-block: 1rem;
     padding: 0.5rem;
     border: #dcdde1 solid 1pt;
     border-radius: 20px;
@@ -128,13 +149,14 @@
 .Parent-ongoing-class-content-item h2 {
     color: #34495e;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .Parent-ongoing-class-content-item .CardDetailsRow {
     display: flex;
     justify-content: space-between;
     color: #7c7d87;
+    font-size: 0.8rem;
 }
 
 /* .Parent-ongoing-class-content h1 {

@@ -24,7 +24,7 @@ class Parent extends Component {
                         Summary
                     </TabContentItem>
                     <TabContentItem>
-                        Ongoing Classes
+                        Classes
                     </TabContentItem>
                 </div>
                 {/* <ParentPayment></ParentPayment> */}

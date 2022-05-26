@@ -4,12 +4,12 @@ import UpcomingPaymentContent from "./UpcomingPaymentContent";
 export const ParentPayment = () => {
     return (
         <div className='Parent-payment'>
+            <h1>Upcoming Payments</h1>
             <div className='Parent-upcomingPayments'>
-                <h1>Upcoming Payments</h1>
                 <UpcomingPaymentContent></UpcomingPaymentContent>
             </div>
+            <h1>Transactions</h1>
             <div className='Parent-transactions'>
-                <h1>Transactions</h1>
                 <TransactionsContent></TransactionsContent>
             </div>
         </div>
