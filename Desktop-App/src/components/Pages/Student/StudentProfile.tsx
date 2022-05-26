@@ -57,7 +57,7 @@ export const StudentProfile = () => {
           </Row>
           </div>
           <div className="ProfileButton">
-            <Button>Save Changes</Button>
+            <Button name="Save Changes"/>
           </div>
         </div>
       </Container>
