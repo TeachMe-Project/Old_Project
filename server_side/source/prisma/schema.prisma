@@ -99,7 +99,7 @@ model Teacher {
 
 model User {
   user_id   Int         @id @default(autoincrement())
-  username  String      @db.VarChar(30)
+  username  String      @unique(map: "username") @db.VarChar(30)
   password  String      @db.VarChar(255)
   Institute Institute[]
   Parent    Parent[]    @ignore

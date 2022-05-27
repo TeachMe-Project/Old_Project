@@ -1,4 +1,4 @@
-import {PrismaClient} from "@prisma/client";
+import {PrismaClient, Prisma} from "@prisma/client";
 import {Request, Response} from "express";
 import logging from "../utils/logging";
 import User from '../types/types'
@@ -44,10 +44,15 @@ const createUser = async (req: Request, res: Response) => {
     })
     .catch((error) =>{
       logging.error(NAMESPACE, error.message, error);
+      if (error instanceof Prisma.PrismaClientKnownRequestError) {
+        if (error.code === 'P2002') {
+            logging.error(NAMESPACE, 'The Email is exist');
+          return res.status(500).send('The Email is exist');
 
+        }
+      }
       return res.status(500).json({
-        message: error.message,
-        error
+        message: error.message
       });
     });
 }
