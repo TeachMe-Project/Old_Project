@@ -22,10 +22,7 @@ app.use((req, res, next) => {
     next();
 });
 
-/** Parse the body of the request */
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use()
+
 
 /** Rules of our API */
 app.use((req, res, next) => {
