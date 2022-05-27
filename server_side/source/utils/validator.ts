@@ -13,9 +13,9 @@ export const validate = (schema: AnyZodObject) => {
       });
       logging.info(NAMESPACE, "Validate is Successful");
       return next();
-    } catch (error) {
+    } catch (error: any) {
       logging.error(NAMESPACE, "Validate is Failed");
-      return res.status(400).json(error);
+      return res.status(400).json(error.issues[0].message);
     }
   };
 };
