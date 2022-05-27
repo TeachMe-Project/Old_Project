@@ -12,6 +12,10 @@ import MyTeachers from "./MyTeachers";
 import Settings from "./Settings";
 import StudentProfile from "./StudentProfile";
 import { Course } from "./Course";
+import Signup from "../../Signup/Signup";
+import StudentSignup from "../../Signup/StudentSignup";
+import TeacherSignup from "../../Signup/TeacherSignup";
+import InstituteSignup from "../../Signup/InstituteSignup";
 
 const routes = [
   {
@@ -38,6 +42,26 @@ const routes = [
   {
     path: "/course",
     main: () => <Course />,
+  },
+  {
+    path: "/signup",
+    exact: true,
+    main: () => <Signup />,
+  },
+  {
+    path: "/studentSignup",
+    exact: true,
+    main: () => <StudentSignup />,
+  },
+  {
+    path: "/teacherSignup",
+    exact: true,
+    main: () => <TeacherSignup />,
+  },
+  {
+    path: "/instituteSignup",
+    exact: true,
+    main: () => <InstituteSignup />,
   },
 ];
 

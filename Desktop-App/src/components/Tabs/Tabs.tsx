@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react'; 
 
-// import React,  from 'react';
 import {string, func, instanceOf} from 'prop-types';
 import Tab from './Tab';
 

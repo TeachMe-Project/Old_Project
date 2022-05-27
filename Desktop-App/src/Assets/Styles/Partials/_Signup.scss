@@ -1,0 +1,62 @@
+.Signup {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  overflow-y: scroll;
+  margin: 10vh auto;
+  border-radius: 20px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  //   rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+color: $header-primary;
+  .LeftTab {
+    align-content: center;
+    img {
+      width: 100%;
+      height: 40%;
+      object-fit: cover;
+    }
+    .LeftTabHeader {
+      margin: 1.5rem 4rem 2rem 5rem;
+      font-weight: 700;
+      font-size: 2rem;
+      
+    }
+    .SignupOptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      margin-left:4rem;
+
+      .Button {
+        width: 200px;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        font-weight:700;
+        font-size: 1rem;
+        text-align: center;
+        color: $header-secondary;
+      }
+      .Button:hover{
+        background-color: $header-secondary;
+        color:$body-bg-primary;
+      }
+    }
+    .Description {
+      text-align: center;
+      margin-top: 1.6rem;
+       a{
+        padding-left: 1rem;
+        text-decoration: none;
+        font-weight: 700;
+        color: $header-secondary;
+      }
+      a:hover{
+        color: $icon-red;
+      }
+    }
+  }
+
+  
+}

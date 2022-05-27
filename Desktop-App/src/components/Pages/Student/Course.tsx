@@ -29,7 +29,6 @@ export const Course = () => {
             </div>
 
             <Tabs>
-             
               <div className="Details">
                 <Details label="Subject" value="Mathematics" symbol=":" />
                 <Details label="Teacher" value="Mr. Lasitha Nuwan" symbol=":" />
