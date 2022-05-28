@@ -39,7 +39,6 @@ export const Dashboard = () => {
                 btnname="Join"
                 image= {<img src={require("../../../Assets/Images/testimg2.jpeg")} />}
               />
-
               <Card
                 header="Mathematics"
                 teacher="Mr. Lasitha Nuwan"

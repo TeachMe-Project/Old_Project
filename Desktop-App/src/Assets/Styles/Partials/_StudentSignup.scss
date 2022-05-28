@@ -22,7 +22,9 @@
     .LeftTabHeader {
       font-weight: 700;
       font-size: 2rem;
+
       text-align: center;
+      padding-left: 0.2rem;
     }
     .Description {
       text-align: center;
@@ -41,66 +43,85 @@
 
   .RightTab {
     width: 60%;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     // background-color: rgb(16, 83, 255);
     .SignupBody {
       .SignupHeader {
         font-weight: 600;
         font-size: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
       }
-      .formRow {
+
+      .formShortRow {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.1rem;
 
         .formItem {
           display: flex;
           flex-direction: column;
-          label {
-            font-weight: 700;
-            font-size: 12px;
-          }
-          input {
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            width: 100%;
-            padding: 3px 10px;
-            font-size: 14px;
-            font-weight: 400;
-          }
-          select {
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            width: 177px;
-
-            option {
-              font-size: 14px;
-              font-weight: 400;
-            }
-          }
-          .formError {
-            font-size: 12px;
-            font-weight: 600;
-            color: $icon-red;
-          }
         }
+      }
+      .formLongRow {
+        margin-bottom: 0.1rem;
+        input {
+          width: 396px;
+
+        }
+      }
+
+      label {
+        font-weight: 700;
+        font-size: 12px;
+      }
+      input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 180px;
+        padding: 3px 10px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 0.8;
+      }
+
+      select {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 177px;
+        height: 24px;
+
+        option {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .formError {
+        font-size: 11px;
+        font-weight: 600;
+        color: $icon-red;
       }
 
       .submitButton {
         float: right;
-        margin-top: 6.5rem;
+        margin-top: 3rem;
 
         input {
-          padding: 5px 12px;
+          padding: 10px;
           border-radius: 10px;
           border-color: none;
           border: 0ch;
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 700;
           color: white;
+          width:75px;
           background-color: $header-secondary;
+        }
+        input:hover{
+          background-color:white;
+          color:$header-secondary;
+          border:2px solid $header-secondary;
         }
       }
     }
